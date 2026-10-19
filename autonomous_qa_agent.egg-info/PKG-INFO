@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: autonomous-qa-agent
+Version: 0.1.0
+Summary: AI-assisted autonomous QA testing system with FastAPI, Playwright, pytest, Pydantic, and SQLite.
+Author: QA Engineering Student
+Requires-Python: >=3.12
+Requires-Dist: fastapi<0.150.0,>=0.110.0
+Requires-Dist: uvicorn[standard]>=0.30.0
+Requires-Dist: playwright>=1.48.0
+Requires-Dist: pydantic>=2.9.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: pytest>=8.0.0
+Requires-Dist: pytest-asyncio>=0.23.0
+Requires-Dist: httpx>=0.27.0
