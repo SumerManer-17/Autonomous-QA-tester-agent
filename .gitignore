@@ -1,0 +1,45 @@
+# Byte-compiled / cached
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.db
+*.sqlite
+*.sqlite3
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Environment
+.env
+.env.local
+*.key
+*.pem
+
+# Logs
+*.log
+logs/
+
+# Artifacts generated at runtime (keep the dir, ignore contents)
+artifacts/
+!artifacts/.gitkeep
+data/
+
+# OS
+Thumbs.db
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+test-reports/
