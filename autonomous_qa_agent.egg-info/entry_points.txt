@@ -1,0 +1,2 @@
+[console_scripts]
+qa-agent = app.main:cli
