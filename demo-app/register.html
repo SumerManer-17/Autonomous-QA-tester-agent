@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register \u2014 DemoShop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header>
+    <a href="index.html" class="logo">DemoShop</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="register.html" class="active">Register</a>
+      <a href="login.html">Sign in</a>
+      <a href="search.html">Search hotels</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <h1>Create an account</h1>
+    <p>Join DemoShop. All data is synthetic and kept only in your browser.</p>
+
+    <div id="register-error" class="status error" data-testid="register-error" style="display:none;"></div>
+    <div id="register-success" class="status success" data-testid="register-success" style="display:none;"></div>
+
+    <form id="register-form" novalidate>
+      <label>
+        Full name
+        <input type="text" id="reg-name" name="name" autocomplete="name" required>
+        <span id="reg-name-error" class="field-error" data-testid="reg-name-error" style="display:none;"></span>
+      </label>
+      <label>
+        Email address
+        <input type="email" id="reg-email" name="email" autocomplete="email" required>
+        <span id="reg-email-error" class="field-error" data-testid="reg-email-error" style="display:none;"></span>
+      </label>
+      <label>
+        Password
+        <input type="password" id="reg-password" name="password" autocomplete="new-password" required minlength="8">
+        <span id="reg-password-error" class="field-error" data-testid="reg-password-error" style="display:none;"></span>
+      </label>
+      <label>
+        Confirm password
+        <input type="password" id="reg-confirm" name="confirm" autocomplete="new-password" required>
+        <span id="reg-confirm-error" class="field-error" data-testid="reg-confirm-error" style="display:none;"></span>
+      </label>
+      <button type="submit" class="primary" id="reg-submit">Create account</button>
+      <button type="button" class="secondary" onclick="window.location.href='login.html'">Already have an account? Sign in</button>
+    </form>
+  </main>
+
+  <footer>
+    DemoShop \u2014 local QA demo &middot; synthetic data only.
+  </footer>
+
+  <div id="toast" class="status" style="display:none; position:fixed; top:20px; right:20px; z-index:50; min-width:260px;"></div>
+  <script src="app.js"></script>
+</body>
+</html>
