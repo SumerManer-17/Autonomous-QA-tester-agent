@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in \u2014 DemoShop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header>
+    <a href="index.html" class="logo">DemoShop</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="register.html">Register</a>
+      <a href="login.html" class="active">Sign in</a>
+      <a href="search.html">Search hotels</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <h1>Sign in</h1>
+    <p>Sign in to your DemoShop account.</p>
+
+    <div id="login-error" class="status error" data-testid="login-error" style="display:none;"></div>
+
+    <form id="login-form" novalidate>
+      <label>
+        Email address
+        <input type="email" id="log-email" name="email" autocomplete="email" required>
+        <span id="log-email-error" class="field-error" data-testid="log-email-error" style="display:none;"></span>
+      </label>
+      <label>
+        Password
+        <input type="password" id="log-password" name="password" autocomplete="current-password" required>
+        <span id="log-password-error" class="field-error" data-testid="log-password-error" style="display:none;"></span>
+      </label>
+      <button type="submit" class="primary" id="log-submit">Sign in</button>
+      <button type="button" class="secondary" onclick="window.location.href='register.html'">Need an account? Register</button>
+    </form>
+    <p class="status info" style="margin-top:12px;">
+      Demo account: <code>demo@example.com</code> / <code>Password123!</code>
+    </p>
+  </main>
+
+  <footer>
+    DemoShop \u2014 local QA demo &middot; synthetic data only.
+  </footer>
+
+  <div id="toast" class="status" style="display:none; position:fixed; top:20px; right:20px; z-index:50; min-width:260px;"></div>
+  <script src="app.js"></script>
+</body>
+</html>
