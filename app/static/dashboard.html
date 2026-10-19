@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autonomous QA Testing Agent</title>
+  <link rel="stylesheet" href="/dashboard/static/dashboard.css">
+</head>
+<body>
+  <header>
+    <a href="#" class="logo">Autonomous QA Testing Agent</a>
+    <a href="/docs" style="margin-left:auto; padding:6px 12px; border:1px solid var(--border); border-radius:4px; font-size:0.9rem; color:var(--brand); text-decoration:none;">API docs</a>
+  </header>
+
+  <main>
+    <section class="section">
+      <h2>Start a test run</h2>
+      <form class="card" id="run-form" onsubmit="return false;">
+        <div>
+          <label for="target-url">Target URL</label>
+          <input type="url" id="target-url" placeholder="http://localhost:3000" required>
+          <p class="note">Only localhost and configured hosts are allowed by default.</p>
+        </div>
+        <div>
+          <label for="testing-goal">Testing goal</label>
+          <textarea id="testing-goal" required></textarea>
+          <p class="note">Example: "Verify that a user can register, log in, search for a hotel, select a room, and complete the booking form. Check input validation and error handling."</p>
+        </div>
+        <button type="button" class="primary" id="start-run">Start test run</button>
+      </form>
+    </section>
+
+    <section class="section hidden" id="run-view">
+      <h2>Run <span id="run-id"></span></h2>
+      <div class="status-row" id="summary"></div>
+      <div id="run-status" class="note"></div>
+
+      <h3>Test cases</h3>
+      <table>
+        <thead><tr><th>Title</th><th>Status</th><th>Error</th><th>Actions</th></tr></thead>
+        <tbody id="tests-body"></tbody>
+      </table>
+
+      <div class="grid-2">
+        <div>
+          <h3>Test detail</h3>
+          <div class="detail hidden" id="test-detail"></div>
+        </div>
+        <div>
+          <h3>Bug reports</h3>
+          <div id="bugs-body"></div>
+          <div class="detail hidden" id="bug-detail"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/dashboard/static/dashboard.js"></script>
+</body>
+</html>
