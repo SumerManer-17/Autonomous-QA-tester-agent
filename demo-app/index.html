@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DemoShop - Hotel Booking Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header>
+    <a href="index.html" class="logo">DemoShop</a>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="register.html">Register</a>
+      <a href="login.html">Sign in</a>
+      <a href="search.html">Search hotels</a>
+      <a href="config.html">Configure defects</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <h1>Welcome to DemoShop Hotel Booking</h1>
+    <p class="lead">
+      A deliberately simple, locally hosted hotel booking demo for testing
+      the Autonomous QA Testing Agent. Register, sign in, search for a
+      hotel, select a room, and complete a booking.
+    </p>
+
+    <div class="card">
+      <h2>Quick start</h2>
+      <ul>
+        <li><strong>Home</strong> \u2014 you are here.</li>
+        <li><strong>Register</strong> \u2014 create an account.</li>
+        <li><strong>Sign in</strong> \u2014 sign in with demo@example.com / Password123!.</li>
+        <li><strong>Search hotels</strong> \u2014 pick dates, destination and a price filter.</li>
+        <li><strong>Select a room</strong> \u2014 choose from available rooms.</li>
+        <li><strong>Book</strong> \u2014 complete the booking form and get a confirmation.</li>
+      </ul>
+      <p>
+        Pre-registered demo account: <code>demo@example.com</code> /
+        <code>Password123!</code>
+      </p>
+    </div>
+
+    <div class="defect-controls">
+      <h3>Configurable defects (for demonstration)</h3>
+      <p>Enable defects to see the agent report bugs; disable them for regression checks.</p>
+      <ul id="defect-list"></ul>
+    </div>
+  </main>
+
+  <footer>
+    DemoShop \u2014 local QA demo &middot; synthetic data only &middot; not for production use.
+  </footer>
+
+  <div id="toast" class="status" style="display:none; position:fixed; top:20px; right:20px; z-index:50; min-width:260px;"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
